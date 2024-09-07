@@ -8,16 +8,6 @@
 
 ## Technical details / Тех. детали
 
-There are two services running: `Libreswan (pluto)` for the IPsec VPN, and `xl2tpd` for L2TP support.
-
-The default IPsec configuration supports:
-
-* IPsec/L2TP with PSK
-* IKEv1 with PSK and XAuth ("Cisco IPsec")
-* IKEv2
-
-The ports that are exposed for this container to work are:
-
 порты 1701:1701/udp -p 500:500/udp -p 4500:4500/udp
 
 ## License / Лицензия
