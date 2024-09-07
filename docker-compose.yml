@@ -1,11 +1,9 @@
-version: '3'
-
 volumes:
   ikev2-vpn-data:
 
 services:
   vpn:
-    image: hwdsl2/ipsec-vpn-server
+    image: boumer7-l2tp:debian
     restart: always
     env_file:
       - ./vpn.env
@@ -14,8 +12,8 @@ services:
       - "4500:4500/udp"
       - "1701:1701/udp"
     privileged: true
-    hostname: ipsec-vpn-server
-    container_name: ipsec-vpn-server
+    hostname: l2tp-vpn-server
+    container_name: l2tp-vpn-server
     volumes:
       - ikev2-vpn-data:/etc/ipsec.d
       - /lib/modules:/lib/modules:ro
