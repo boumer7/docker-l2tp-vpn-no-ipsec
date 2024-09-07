@@ -10,6 +10,27 @@
 
 порты 1701:1701/udp -p 500:500/udp -p 4500:4500/udp
 
+# Установка
+
+```
+git clone https://github.com/boumer7/docker-l2tp-vpn-no-ipsec.git l2tp-boumer7
+cd l2tp-boumer7
+
+touch vpn.env
+vim vpn.env/nano vpn.env
+
+Добавьте и сохраните логин и пароль
+VPN_USER=<ваш юзер>
+VPN_PASSWORD=<ваш пароль>
+
+сбилдите image
+docker build -f Dockerfile.debian -t boumer7-l2tp:debian .
+
+запустите докер компоуз
+docker compose up --build -d
+
+```
+
 ## License / Лицензия
 
 **Note:** The software components inside the pre-built image (such as Libreswan and xl2tpd) are under the respective licenses chosen by their respective copyright holders. As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
