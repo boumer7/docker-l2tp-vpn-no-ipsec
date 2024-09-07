@@ -1,5 +1,5 @@
 # L2TP server for routers without IPSec / L2TP сервер для роутеров без IPSec 
-# modification by boumer7
+# by boumer7
 
 [Оригинальный репозиторий](https://github.com/hwdsl2/docker-ipsec-vpn-server)
 и
